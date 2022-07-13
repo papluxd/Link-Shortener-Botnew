@@ -26,7 +26,7 @@ print("Bot is Started Now")
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm Link Shortener bot. Just send me link and get short link, You can also send multiple links seperated by a space or enter.\n\n**Developer:** @AKBotZ")
+        "I'm Link Shortener bot. Just send me link and get short link, You can also send multiple links seperated by a space or enter.\n\n**Developer:** @movie_time_botonly")
 
 
 @akbotz.on_message(filters.private & filters.text & filters.incoming)
