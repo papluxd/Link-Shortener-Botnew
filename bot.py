@@ -12,9 +12,6 @@ API_HASH = environ.get('API_HASH','3eba5d471162181b8a3f7f5c0a23c307')
 BOT_TOKEN = environ.get('BOT_TOKEN','5739114690:AAELqrowdFBQmTKDmguShUBNNepuQk4XQh8')
 API_KEY = environ.get('API_KEY','8e4849c23d89ae57f671ae64d3680a0e817e0e7e')
 API_URL = environ.get('API_URL','https://droplink.co/api')
-
-API_URL1 = environ.get('API_URL1','https://gplinks.in/api')
-API_KEY1 = environ.get('API_KEY1','60289db9d54284dc2c90aa61d259342d5790f7d0')
 akbotz = Client('link shortener bot',
              api_id=API_ID,
              api_hash=API_HASH,
@@ -85,14 +82,7 @@ async def get_shortlink(link):
         async with session.get(url, params=params, raise_for_status=True) as response:
             data = await response.json()
             return data["shortenedUrl"]
-async def get_shortlink(link):
-    url = API_URL1
-    params = {'api': API_KEY1, 'url': link}
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url, params=params, raise_for_status=True) as response:
-            data = await response.json()
-            return data["shortenedUrl"]
 
 
 akbotz.run()
