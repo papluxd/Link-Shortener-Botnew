@@ -84,6 +84,14 @@ async def get_shortlink(link):
         async with session.get(url, params=params, raise_for_status=True) as response:
             data = await response.json()
             return data["shortenedUrl"]
+async def get_shortlink(link):
+    url = API_URL1
+    params = {'api': API_KEY1, 'url': link}
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, params=params, raise_for_status=True) as response:
+            data = await response.json()
+            return data["shortenedUrl"]
 
 
 akbotz.run()
