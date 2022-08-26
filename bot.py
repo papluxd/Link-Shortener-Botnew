@@ -7,13 +7,13 @@ from os import environ
 from pyrogram import Client, filters
 from pyrogram.types import *
 
-API_ID = environ.get('API_ID')
-API_HASH = environ.get('API_HASH')
-BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY')
-API_URL = environ.get('API_URL')
-API_URL1 = environ.get('API_URL1')
-API_KEY1 = environ.get('API_KEY1')
+API_ID = environ.get('API_ID','4682685')
+API_HASH = environ.get('API_HASH','3eba5d471162181b8a3f7f5c0a23c307')
+BOT_TOKEN = environ.get('BOT_TOKEN','5739114690:AAELqrowdFBQmTKDmguShUBNNepuQk4XQh8')
+API_KEY = environ.get('API_KEY','8e4849c23d89ae57f671ae64d3680a0e817e0e7e')
+API_URL = environ.get('API_URL','https://droplink.co/member/tools/api')
+API_URL1 = environ.get('API_URL1','https://gplinks.in/member/tools/api')
+API_KEY1 = environ.get('API_KEY1','60289db9d54284dc2c90aa61d259342d5790f7d0')
 akbotz = Client('link shortener bot',
              api_id=API_ID,
              api_hash=API_HASH,
@@ -40,7 +40,7 @@ async def link_handler(bot, message):
     for link in links:
         try:
             short_link = await get_shortlink(link)
-            await message.reply(f"𝐇𝐞𝐫𝐞 𝐢𝐬 𝐘𝐨𝐮𝐫 𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤\n\n𝐎𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐋𝐢𝐧𝐤: {link}\n\n𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤: `{short_link}`",quote=True,disable_web_page_preview=True)
+            await message.reply(f"𝐇𝐞𝐫𝐞 𝐢𝐬 𝐘𝐨𝐮𝐫 𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤(DROPLINK)\n\n𝐎𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐋𝐢𝐧𝐤: {link}\n\n𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤: `{short_link}`",quote=True,disable_web_page_preview=True)
         except Exception as e:
             await message.reply(f'𝐄𝐫𝐫𝐨𝐫: `{e}`', quote=True)
 
@@ -69,7 +69,7 @@ async def link_handler(bot, message):
 
             short_link = await get_shortlink(link)
 
-            await message.reply(f"𝐇𝐞𝐫𝐞 𝐢𝐬 𝐘𝐨𝐮𝐫 𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤\n\n𝐎𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐋𝐢𝐧𝐤: {link}\n\n𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤: `{short_link}`",quote=True,disable_web_page_preview=True)
+            await message.reply(f"𝐇𝐞𝐫𝐞 𝐢𝐬 𝐘𝐨𝐮𝐫 𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤(GPLINK)\n\n𝐎𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐋𝐢𝐧𝐤: {link}\n\n𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤: `{short_link}`",quote=True,disable_web_page_preview=True)
 
         except Exception as e:
 
