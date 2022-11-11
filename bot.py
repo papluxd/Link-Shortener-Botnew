@@ -7,11 +7,11 @@ from os import environ
 from pyrogram import Client, filters
 from pyrogram.types import *
 
-API_ID = environ.get('API_ID','4682685')
-API_HASH = environ.get('API_HASH','3eba5d471162181b8a3f7f5c0a23c307')
-BOT_TOKEN = environ.get('BOT_TOKEN','5739114690:AAELqrowdFBQmTKDmguShUBNNepuQk4XQh8')
-API_KEY = environ.get('API_KEY','8e4849c23d89ae57f671ae64d3680a0e817e0e7e')
-API_URL = environ.get('API_URL','https://droplink.co/api')
+API_ID = environ.get('API_ID','10057959')
+API_HASH = environ.get('API_HASH','5620f37ec7134a09a09a494de01cad44')
+BOT_TOKEN = environ.get('BOT_TOKEN','5412845552:AAHI4jBLsORMLsXEu7o_PAoAR0A6-zZmOEA')
+API_KEY = environ.get('API_KEY','d22152f4a53297536e1535f98593a30f1dadf8fe')
+API_URL = environ.get('API_URL','https://shorturllink.in/api')
 akbotz = Client('link shortener bot',
              api_id=API_ID,
              api_hash=API_HASH,
